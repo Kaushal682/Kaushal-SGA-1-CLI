@@ -1,17 +1,29 @@
-1. whoami
-  Explanation: I ran this to display my current effective user ID. It confirmed that I am logged in as the user sarthak.
+1. Command: whoami
 
-2. groups
-  Explanation: This command prints the groups a user is in. The output verified that my user belongs to the g2025eb01324 and users groups.
+Explanation:
+This command displays the username of the currently logged-in user. The output confirmed that I was logged in as "g2025eb01324".
 
-3. echo $SHELL
-  Explanation: By echoing the SHELL environment variable, I verified the command-line interpreter in use. The output showed /bin/bash as my current shell.
+2. Command: groups
 
-4. pwd
-  Explanation: This prints the absolute path of the current working directory. It confirmed I was operating within my home directory, /home/g2025eb01324.
+Explanation:
+This command displays all the groups that the current user belongs to. The output showed that my user belongs to the groups "g2025eb01324", "adm", "sudo", and "docker".
 
-5. ls -ls
-  Explanation: This command lists the files and directories along with their sizes and permissions. I observed the default directories available in the Google Cloud Shell environment.
+3. Command: echo $SHELL
 
-6. ping -c 4 google.com
-  Explanation: This sent 4 ICMP echo requests to Google to test external network connectivity. It returned 4 successful replies with 0% packet loss, confirming the environment is connected to the internet.
+Explanation:
+This command displays the current shell being used. The output showed "/bin/bash", confirming that the Bash shell is the active command-line interpreter.
+
+4. Command: pwd
+
+Explanation:
+This command prints the absolute path of the current working directory. The output confirmed that I was working in the "/home/g2025eb01324/question1" directory.
+
+5. Command: ls -la
+
+Explanation:
+This command lists all files and directories, including hidden files, in long format. It displayed the contents of the current directory, including "Environment_Report.txt", file permissions, ownership, size, and timestamps.
+
+6. Command: ping -c 4 google.com
+
+Explanation:
+This command sends four ICMP echo requests to Google's server to test internet connectivity. The output showed four successful replies with 0% packet loss, confirming that the system had an active internet connection.

@@ -1,1 +1,59 @@
+Storage Assessment Report
+=========================
 
+Date: 03 July 2026
+
+Commands Executed:
+------------------
+1. lsblk
+2. df -h
+3. df -i
+4. du -sh .
+5. mount | head
+
+Results:
+--------
+
+1. Block Devices (lsblk)
+------------------------
+Primary Disk:
+- sda : 100 GB
+  - Multiple partitions including sda1 mounted on /root.
+Secondary Disk:
+- sdb : 5 GB
+  - sdb1 mounted on /home.
+
+2. Disk Space Usage (df -h)
+---------------------------
+Filesystem         Size   Used   Avail   Use%
+/root              95G    45G    50G     48%
+/home              4.8G   124M   4.4G     3%
+/dev/shm           64M      0    64M      0%
+
+3. Inode Usage (df -i)
+----------------------
+Filesystem         Inodes     IUsed     IFree    IUse%
+/root              6258720    876118    5382602   14%
+/home               327680       559     327121    1%
+/dev/shm           1017262         1    1017261    1%
+
+4. Current Directory Size (du -sh .)
+------------------------------------
+Current directory size: 16K
+
+5. Mounted Filesystems (mount | head)
+-------------------------------------
+Observed mounted filesystems include:
+- overlay
+- proc
+- tmpfs
+- devpts
+- mqueue
+- sysfs
+- cgroup
+- ext4 mounted on /root
+- ext4 mounted on /home
+
+Conclusion:
+-----------
+The system storage is functioning normally. Approximately 50 GB of free space is available on the root filesystem, while the /home partition has over 4 GB of free space. Inode usage is low, indicating sufficient capacity for creating additional files. The current working directory occupies only 16 KB, and all major filesystems are mounted correctly.

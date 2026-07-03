@@ -1,1 +1,56 @@
+1. Command: mkdir question3
 
+Explanation:
+This command creates a new directory named "question3" to store all files related to Question 3.
+
+2. Command: cd question3
+
+Explanation:
+This command changes the current working directory to the "question3" directory.
+
+3. Command: touch Link_Analysis_Report.txt
+
+Explanation:
+This command creates an empty file named "Link_Analysis_Report.txt". This file is used to document the observations and results of the link analysis task.
+
+4. Command: echo "Linux Lab" > original.txt
+
+Explanation:
+This command creates a file named "original.txt" and writes the text "Linux Lab" into it.
+
+5. Command: ln original.txt hardlink.txt
+
+Explanation:
+This command creates a hard link named "hardlink.txt" that points to the same inode as "original.txt". Both filenames reference the same file data on disk.
+
+6. Command: ln -s original.txt softlink.txt
+
+Explanation:
+This command creates a symbolic (soft) link named "softlink.txt" that points to "original.txt". Unlike a hard link, a symbolic link stores only the file path of the original file.
+
+7. Command: ls -li
+
+Explanation:
+This command lists all files along with their inode numbers and detailed information. The output confirmed that "original.txt" and "hardlink.txt" shared the same inode number, while "softlink.txt" had a different inode because it is a symbolic link.
+
+8. Command: stat original.txt
+   Command: stat hardlink.txt
+   Command: stat softlink.txt
+
+Explanation:
+These commands display detailed information about each file, including inode number, permissions, file size, timestamps, and link count. The output showed that the hard link shared the same inode and link count as the original file, while the symbolic link had its own inode and referenced the original file.
+
+9. Command: rm original.txt
+
+Explanation:
+This command deletes the original file. Since the hard link points to the same inode, the file data remains available through "hardlink.txt". The symbolic link becomes broken because its target file no longer exists.
+
+10. Command: cat hardlink.txt
+
+Explanation:
+This command displays the contents of "hardlink.txt". The output successfully showed "Linux Lab", proving that the hard link still provides access to the original file's data after "original.txt" was deleted.
+
+11. Command: cat softlink.txt
+
+Explanation:
+This command attempts to display the contents of "softlink.txt". Since the original file had been deleted, the symbolic link became invalid, and the system returned the error "No such file or directory".

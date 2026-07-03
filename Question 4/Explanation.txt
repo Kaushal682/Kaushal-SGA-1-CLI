@@ -1,1 +1,17 @@
+Explanation
 
+1. Attempted to use the `lsof` command to list open files. The command was not available in the Cloud Shell environment, resulting in the message "lsof: command not found".
+
+2. Used `ls -l /proc/$$/fd` as an alternative to inspect the file descriptors of the current shell process. The output showed the standard input (0), standard output (1), standard error (2), and an additional file descriptor (255), all linked to the current terminal.
+
+3. Used output redirection (`>`) to write the text "Hello Linux" into the file `output.txt`.
+
+4. Used error redirection (`2>`) with the command `ls unknownfile 2> error.txt` to capture the error message generated when attempting to list a non-existent file.
+
+5. Used both standard output and standard error redirection with `ls > files.txt 2> errors.txt`. The directory listing was saved in `files.txt`, while any error messages would be written to `errors.txt`.
+
+6. Executed the `ulimit -a` command to display the resource limits for the current shell, including maximum open files, memory size, stack size, CPU time, and other system resource limits.
+
+Conclusion
+
+This exercise demonstrated how Linux handles standard input, standard output, standard error, file descriptor management, output and error redirection, and process resource limits. Even though the `lsof` command was unavailable, the `/proc/$$/fd` directory provided equivalent information about open file descriptors.

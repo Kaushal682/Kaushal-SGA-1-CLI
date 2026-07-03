@@ -1,1 +1,54 @@
+1. Command: mkdir question2
 
+Explanation:
+This command creates a new directory named "question2". It is used to organize all files related to Question 2.
+
+2. Command: cd question2
+
+Explanation:
+This command changes the current working directory to "question2", allowing all subsequent operations to be performed inside it.
+
+3. Command: touch Project_Workspace_Report.txt
+
+Explanation:
+This command creates an empty file named "Project_Workspace_Report.txt". It will be used to document the project workspace.
+
+4. Command: mkdir ProjectWorkspace
+
+Explanation:
+This command creates the main project directory named "ProjectWorkspace".
+
+5. Command: mkdir ProjectWorkspace/docs
+
+Explanation:
+This command creates a subdirectory named "docs" inside the ProjectWorkspace directory to store documentation files.
+
+6. Command: mkdir ProjectWorkspace/source
+
+Explanation:
+This command creates another subdirectory named "source" inside ProjectWorkspace to store source code or project files.
+
+7. Command: touch ProjectWorkspace/docs/plan.txt
+
+Explanation:
+This command creates an empty file named "plan.txt" inside the docs directory. It can be used to store the project plan or documentation.
+
+8. Command: ls -l ProjectWorkspace/docs
+
+Explanation:
+This command lists the contents of the docs directory in long format, displaying file permissions, ownership, size, and modification date. It verified that the file "plan.txt" was created successfully.
+
+9. Command: chmod 700 ProjectWorkspace
+
+Explanation:
+This command changes the permissions of the ProjectWorkspace directory to 700. The owner has read, write, and execute permissions, while group members and others have no permissions.
+
+10. Command: ls -ld ProjectWorkspace
+
+Explanation:
+This command displays detailed information about the ProjectWorkspace directory, including its permissions. It confirmed that the permissions were successfully changed to 700 (drwx------).
+
+11. Command: umask
+
+Explanation:
+This command displays the current user file creation mask (umask). The output showed the default permission mask used when creating new files and directories.

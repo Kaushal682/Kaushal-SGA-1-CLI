@@ -1,39 +1,26 @@
 Environment Report
 
-Environment: Google Cloud Shell
-Operating System: Debian GNU/Linux (Google Cloud Shell)
-Shell: /bin/bash
-Username: g2025eb01324
+Environment:
+- Platform: Google Cloud Shell
+- Operating System: Debian GNU/Linux (Google Cloud Shell)
+- Shell: Bash
+- Username: g2025eb01324
 
-Commands Executed and results:
+Commands Executed:
 1. whoami
-      g2025eb01324
-
 2. groups
-      g2025eb01324 adm sudo docker
-
 3. echo $SHELL
-      /bin/bash
-
 4. pwd
-     /home/g2025eb01324/question1
-
-5. ls -ls 
-      total 8
-      drwxrwxr-x  2 g2025eb01324 g2025eb01324 4096 Jul  3 07:05 .
-      drwxr-x--- 12 g2025eb01324 g2025eb01324 4096 Jul  3 07:04 ..
-      -rw-rw-r--  1 g2025eb01324 g2025eb01324    0 Jul  3 07:05 Environment_Report.txt
-
+5. ls -la
 6. ping -c 4 google.com
-      PING google.com (74.125.24.102) 56(84) bytes of data.
-64 bytes from sf-in-f102.1e100.net (74.125.24.102): icmp_seq=1 ttl=117 time=0.646 ms
-64 bytes from sf-in-f102.1e100.net (74.125.24.102): icmp_seq=2 ttl=117 time=0.378 ms
-64 bytes from sf-in-f102.1e100.net (74.125.24.102): icmp_seq=3 ttl=117 time=0.407 ms
-64 bytes from sf-in-f102.1e100.net (74.125.24.102): icmp_seq=4 ttl=117 time=0.394 ms
 
---- google.com ping statistics ---
-4 packets transmitted, 4 received, 0% packet loss, time 3088ms
-rtt min/avg/max/mdev = 0.378/0.456/0.646/0.110 ms
+Command Results:
+- Verified the current logged-in user.
+- Displayed the groups associated with the current user.
+- Confirmed that the active shell is /bin/bash.
+- Verified the current working directory as /home/g2025eb01324/question1.
+- Listed all files and directories, including hidden files, with detailed information.
+- Successfully tested internet connectivity with Google. Four packets were transmitted and received with 0% packet loss.
 
-Result:
-All commands were executed successfully in the Google Cloud Shell environment. The Linux environment was configured correctly, and internet connectivity was verified.
+Conclusion:
+The Linux environment in Google Cloud Shell was configured successfully. All required commands executed without errors, and the system environment, directory information, user details, and network connectivity were successfully verified.

@@ -1,1 +1,36 @@
+Link Analysis Report
 
+Environment:
+- Platform: Google Cloud Shell
+- Operating System: Debian GNU/Linux
+- Shell: Bash
+
+Objective:
+To create and compare hard links and symbolic (soft) links in Linux and observe their behavior after deleting the original file.
+
+Files Created:
+- original.txt
+- hardlink.txt
+- softlink.txt
+
+Commands Executed:
+1. touch Link_Analysis_Report.txt
+2. echo "Linux Lab" > original.txt
+3. ln original.txt hardlink.txt
+4. ln -s original.txt softlink.txt
+5. ls -li
+6. stat original.txt
+7. stat hardlink.txt
+8. stat softlink.txt
+9. rm original.txt
+10. cat hardlink.txt
+11. cat softlink.txt
+
+Observations:
+- The hard link (hardlink.txt) shared the same inode number as original.txt.
+- The symbolic link (softlink.txt) had a different inode and pointed to the path of original.txt.
+- After deleting original.txt, the hard link continued to work because it referenced the same inode.
+- The symbolic link became broken and displayed the error "No such file or directory" because its target file no longer existed.
+
+Conclusion:
+Hard links directly reference the same file data (inode) and remain functional even if the original filename is removed. Symbolic links store only the path to the original file and become invalid when the target file is deleted. This experiment demonstrated the functional differences between hard links and symbolic links in Linux.

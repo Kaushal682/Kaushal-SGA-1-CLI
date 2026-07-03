@@ -1,1 +1,51 @@
+Storage Assessment Explanation
 
+1. lsblk
+   Purpose:
+   Displays all available block storage devices, their partitions, sizes, and mount points.
+
+   Observation:
+   The system contains:
+   - sda (100 GB) as the primary disk with multiple partitions.
+   - sdb (5 GB) mounted at /home.
+   This provides an overview of the storage layout.
+
+2. df -h
+   Purpose:
+   Shows disk usage in a human-readable format (KB, MB, GB).
+
+   Observation:
+   - Root filesystem (/root) is 95 GB with about 45 GB used and 50 GB available.
+   - Home directory (/home) is approximately 4.8 GB with only about 124 MB used.
+   - Shared memory (/dev/shm) is 64 MB and currently unused.
+
+3. df -i
+   Purpose:
+   Displays inode usage instead of disk space.
+
+   Observation:
+   All mounted filesystems have a very low inode usage percentage (around 1–14%), indicating that sufficient inodes are available for creating additional files.
+
+4. du -sh .
+   Purpose:
+   Calculates the total size of the current directory.
+
+   Observation:
+   The current directory occupies approximately 16 KB, indicating very little storage usage.
+
+5. mount | head
+   Purpose:
+   Lists the mounted filesystems and their mount options.
+
+   Observation:
+   The output shows several mounted filesystems, including:
+   - overlay filesystem
+   - proc
+   - tmpfs
+   - devpts
+   - sysfs
+   - cgroup
+   - ext4 mounted on /root and /home
+
+Summary:
+The storage assessment shows that the system has adequate free disk space, low inode utilization, and properly mounted filesystems. The current working directory occupies very little storage, indicating an efficient and healthy storage environment.

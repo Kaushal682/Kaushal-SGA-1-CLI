@@ -1,1 +1,38 @@
+Project Workspace Report
 
+Environment:
+- Platform: Google Cloud Shell
+- Operating System: Debian GNU/Linux
+- Shell: Bash
+
+Objective:
+Create a project workspace with an organized directory structure and configure directory permissions.
+
+Directory Structure Created:
+
+ProjectWorkspace/
+├── docs/
+│   └── plan.txt
+└── source/
+
+Commands Executed:
+1. mkdir ProjectWorkspace
+2. mkdir ProjectWorkspace/docs
+3. mkdir ProjectWorkspace/source
+4. touch ProjectWorkspace/docs/plan.txt
+5. ls -l ProjectWorkspace/docs
+6. chmod 700 ProjectWorkspace
+7. ls -ld ProjectWorkspace
+8. umask
+
+Results:
+- Successfully created the ProjectWorkspace directory.
+- Successfully created the docs and source subdirectories.
+- Successfully created the file plan.txt inside the docs directory.
+- Verified the file using the ls -l command.
+- Changed the ProjectWorkspace directory permissions to 700.
+- Verified the updated permissions using ls -ld.
+- Checked the current default file creation mask using the umask command.
+
+Conclusion:
+The project workspace was created successfully with the required directory structure and permissions. All commands executed without errors, and the workspace is ready for further project development.
